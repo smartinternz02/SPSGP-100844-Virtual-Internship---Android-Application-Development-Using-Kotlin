@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_gravity="center">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black_shade_2"
-        >
+        android:background="@color/blue_shade_1">
+
         <TextView
+            android:id="@+id/idTVHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add Items to cart"
-            android:textAllCaps="false"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="28sp"
-            android:padding="4dp"
             android:layout_margin="4dp"
-            android:id="@+id/IdTVHeading"/>
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Add Item to Cart"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/IdTVHeading"
+            android:layout_below="@id/idTVHeading"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -34,22 +35,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:hint="Enter Item Name"
+                android:hint="Enter Item name"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/idEditItemName"
+                    android:id="@+id/idEdtItemName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white"
-                    android:textSize="14sp">
-
-                </com.google.android.material.textfield.TextInputEditText>
-
+                    android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -64,16 +62,13 @@
                 app:hintTextColor="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/idEditItemQuantity"
+                    android:id="@+id/idEdtItemQuantity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white"
-                    android:textSize="14sp">
-
-                </com.google.android.material.textfield.TextInputEditText>
-
+                    android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,31 +77,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:hint="Enter Item Price"
+                android:hint="Enter Item price"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/idEditItemPrice"
+                    android:id="@+id/idEdtItemPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white"
-                    android:textSize="14sp">
-
-                </com.google.android.material.textfield.TextInputEditText>
-
+                    android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:orientation="horizontal"
-                android:weightSum="2" >
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/idBtnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button_back"
+                    android:text="Cancel"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/idBtnAdd"
@@ -116,26 +118,13 @@
                     android:layout_weight="1"
                     android:background="@drawable/custom_button_back"
                     android:text="Add"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"/>
+                    android:textAllCaps="false" />
 
 
-                <Button
-                    android:id="@+id/idBtncancle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/custom_button_back"
-                    android:text="Cancle"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white" />
             </LinearLayout>
-
-
-
 
         </LinearLayout>
     </RelativeLayout>
+
 
 </androidx.cardview.widget.CardView>

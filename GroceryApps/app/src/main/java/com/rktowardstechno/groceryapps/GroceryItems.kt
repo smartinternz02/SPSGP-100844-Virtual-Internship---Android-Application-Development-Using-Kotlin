@@ -1,22 +1,21 @@
-package com.rktowardstechno.groceryapps;
+package com.example.groceryapplication
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-
-
-@Entity(tableName="grocery_items")
-public final data class GroceryItems(
-
+@Entity(tableName = "grocerry_items")
+data class GroceryItems(
     @ColumnInfo(name = "itemName")
     var itemName: String,
+
     @ColumnInfo(name = "itemQuantity")
     var itemQuantity: Int,
-    @ColumnInfo(name="itemPrice")
+
+    @ColumnInfo(name = "itemPrice")
     var itemPrice: Int,
-    )
-    {
-        @PrimaryKey(autoGenerate = true)
-        var id:Int?=null
-    }
+
+    ) {
+    @PrimaryKey(autoGenerate = true)
+    var id: Int? = null
+}

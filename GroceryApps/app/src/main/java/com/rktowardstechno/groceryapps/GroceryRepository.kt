@@ -1,11 +1,8 @@
-package com.rktowardstechno.groceryapps;
+package com.example.groceryapplication
 
 class GroceryRepository(private val db: GroceryDatabase) {
+    suspend fun insert(items: GroceryItems) = db.getGroceryDao().insert(items)
+    suspend fun delete(items: GroceryItems) = db.getGroceryDao().delete(items)
 
-
-    suspend fun insert(items: GroceryItems)=db.getGroceryDap().insert(items)
-    suspend fun delete(items: GroceryItems)=db.getGroceryDap().delete(items)
-
-    fun getAllItems()=db.getGroceryDap().getAllGroceryItems()
-
+    fun getAllItems() = db.getGroceryDao().getAllGroceryItems()
 }

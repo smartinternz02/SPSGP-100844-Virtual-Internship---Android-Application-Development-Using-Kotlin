@@ -1,15 +1,13 @@
-package com.rktowardstechno.groceryapps;
+package com.example.groceryapplication
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import java.security.AccessControlContext
-
 
 @Database(entities = [GroceryItems::class], version = 1)
 abstract class GroceryDatabase : RoomDatabase() {
-    abstract fun getGroceryDap(): GroceryDao
+    abstract fun getGroceryDao(): GroceryDao
 
     companion object {
         @Volatile
@@ -22,6 +20,7 @@ abstract class GroceryDatabase : RoomDatabase() {
             }
         }
 
+
         private fun createDatabase(context: Context) =
             Room.databaseBuilder(
                 context.applicationContext,
@@ -30,3 +29,16 @@ abstract class GroceryDatabase : RoomDatabase() {
             ).build()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

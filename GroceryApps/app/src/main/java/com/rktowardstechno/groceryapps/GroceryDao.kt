@@ -1,20 +1,24 @@
-package com.rktowardstechno.groceryapps;
+package com.example.groceryapplication
+
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
-// annotation for dao class.
 @Dao
-abstract class GroceryDao {
+interface GroceryDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(item :GroceryItems) {
-    }
+    suspend fun insert(item: GroceryItems)
 
     @Delete
-    suspend fun delete(item:GroceryItems) {
-    }
+    suspend fun delete(item: GroceryItems)
 
-    @Query("Select * from grocery_items")
-    abstract fun getAllGroceryItems(): LiveData<List<GroceryItems>>
-
+    @Query("SELECT * FROM grocerry_items")
+    fun getAllGroceryItems(): LiveData<List<GroceryItems>>
 }
+
+
+
+
+
+
+

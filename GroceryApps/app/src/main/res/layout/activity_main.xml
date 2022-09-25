@@ -4,30 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_shade_1"
+    android:backgroundTintMode="@color/blue_shade_1"
+    android:background="@drawable/logo_background"
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idRVItems"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/grocery_rv_items" />
+        tools:listitem="@layout/grocery_rv_item" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/idFABAdd"
-        android:layout_width="212dp"
-        android:layout_height="274dp"
-        android:src="@drawable/iic_add"
-        android:tint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/light_blue_shade" />
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/blue_shade_2"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add"
+        app:tint="@color/white" />
+
 
 </RelativeLayout>
