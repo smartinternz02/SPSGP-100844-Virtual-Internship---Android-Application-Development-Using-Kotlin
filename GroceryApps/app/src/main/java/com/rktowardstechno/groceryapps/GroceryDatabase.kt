@@ -1,9 +1,11 @@
-package com.example.groceryapplication
+package com.rktowardstechno.groceryapps
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.rktowardstechno.groceryapps.GroceryItems
+import com.rktowardstechno.groceryapps.GroceryDao
 
 @Database(entities = [GroceryItems::class], version = 1)
 abstract class GroceryDatabase : RoomDatabase() {

@@ -1,4 +1,7 @@
-package com.example.groceryapplication
+package com.rktowardstechno.groceryapps
+
+import com.rktowardstechno.groceryapps.GroceryDatabase
+import com.rktowardstechno.groceryapps.GroceryItems
 
 class GroceryRepository(private val db: GroceryDatabase) {
     suspend fun insert(items: GroceryItems) = db.getGroceryDao().insert(items)

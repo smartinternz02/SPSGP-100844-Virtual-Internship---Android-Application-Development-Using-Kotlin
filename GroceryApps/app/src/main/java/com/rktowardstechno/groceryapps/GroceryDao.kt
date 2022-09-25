@@ -1,7 +1,8 @@
-package com.example.groceryapplication
+package com.rktowardstechno.groceryapps
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.rktowardstechno.groceryapps.GroceryItems
 
 @Dao
 interface GroceryDao {

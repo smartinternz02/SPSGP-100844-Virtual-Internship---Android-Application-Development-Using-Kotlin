@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTintMode="@color/blue_shade_1"
+    android:backgroundTintMode="@color/mtrl_textinput_default_box_stroke_color"
     android:background="@drawable/logo_background"
     tools:context=".MainActivity">
 
@@ -21,7 +21,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
-        android:backgroundTint="@color/blue_shade_2"
+        android:backgroundTint="@color/purple_200"
         android:layout_alignParentRight="true"
         android:src="@drawable/ic_add"
         app:tint="@color/white" />

@@ -1,4 +1,4 @@
-package com.example.groceryapplication
+package com.rktowardstechno.groceryapps
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.rktowardstechno.groceryapps.GroceryItems
+import com.rktowardstechno.groceryapps.R
 
 class GroceryRVAdapter(var list: List<GroceryItems>, val groceryItemClickInterface: GroceryItemClickInterface): RecyclerView.Adapter<GroceryRVAdapter.GroceryViewHolder>() {
 
